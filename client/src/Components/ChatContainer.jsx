@@ -1,5 +1,8 @@
 import React,{useEffect, useRef} from 'react'
 import assets, { messagesDummyData } from '../assets/assets.js';
+import { formatMessageTime } from '../lib/utils.js';
+
+
 const ChatContainer = ({selectedUser,setselectedUser}) => {
   const scrollEnd = useRef();
   useEffect(() => {
@@ -8,7 +11,7 @@ const ChatContainer = ({selectedUser,setselectedUser}) => {
     }
   }, [messagesDummyData]);
 
-  
+
   return selectedUser ? (
     <div className = "h-full overflow-scroll relative backdrop-blur-lg">
       {/* Header */}
@@ -33,15 +36,12 @@ const ChatContainer = ({selectedUser,setselectedUser}) => {
            <div className = "text-center text-xs">
             <img src={message.senderId === '680f50e4f10f3cd28382ecf9' ? assets.avatar_icon : assets.profile_martin} alt="" 
             className='w-7 rounded-full'/>
-            <p className='text-gray-500'>{message.createdAt}</p>
+            <p className='text-gray-500'>{formatMessageTime(message.createdAt)}</p>
 
            </div>
           </div>
         ))}
-        <div>
-          ref = {scrollEnd}
-
-        </div>
+        <div ref={scrollEnd}></div>
       </div>
     </div>
   ) : (
