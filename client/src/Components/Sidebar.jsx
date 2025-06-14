@@ -74,8 +74,8 @@ const Sidebar = ({selectedUser,setselectedUser}) => {
         selectedUser ? "max-md:hidden" : ""
       }`}
     > 
-      {/* <Header />
-      <UserDetails selectedUser={selectedUser} setselectedUser={setselectedUser} /> */}
+      <Header />
+      <UserDetails selectedUser={selectedUser} setselectedUser={setselectedUser} />
     </div>
   );
 }
