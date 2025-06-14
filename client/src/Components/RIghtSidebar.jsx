@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RIghtSidebar = () => {
+const RightSidebar = () => {
   return (
     <div>
         <h1>RightSideBar</h1>
@@ -8,4 +8,4 @@ const RIghtSidebar = () => {
   )
 }
 
-export default RIghtSidebar
+export default RightSidebar
