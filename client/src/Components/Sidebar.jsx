@@ -29,6 +29,7 @@ const UserDetails = ({ selectedUser, setselectedUser }) => {
 }
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <div className="pb-5">
       <div className="flex justify-between items-center">
