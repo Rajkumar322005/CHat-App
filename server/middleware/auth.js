@@ -1,7 +1,7 @@
 //Middleware to protect routes
 import User from '../models/User.js';
 import jwt, { decode } from 'jsonwebtoken';
-export const productRoute = async (req, res, next) => {
+export const protectRoute = async (req, res, next) => {
     try{
         const token = req.headers.token;
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
