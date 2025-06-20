@@ -1,0 +1,5 @@
+{
+  "merge-conflict.autoNavigateNextConflict.enabled": true,
+  "workbench.experimental.share.enabled": true,
+  "inlineChat.enableV2": false
+}
